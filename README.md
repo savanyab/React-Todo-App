@@ -1,4 +1,4 @@
-#ReactExample
+# ReactExample
 
 I started to learn React framework for frontend developing.
 This is a practicing project, nothing nice is in here :)
