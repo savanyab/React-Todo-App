@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import TodoItem from './TodoItem';
 
 class TodoList extends React.Component {
   constructor (props) {
@@ -17,7 +18,7 @@ class TodoList extends React.Component {
   }
 
   render () {
-    const todos = this.state.todos.map(todos => <div> {todos.name} - {todos.message} </div>);
+    const todos = this.state.todos.map(todo => <TodoItem item={todo} />);
     console.log(todos);
     return (
       <div>
