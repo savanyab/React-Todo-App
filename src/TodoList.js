@@ -12,16 +12,17 @@ class TodoList extends React.Component {
 
   componentDidMount () {
     axios.get('http://localhost:8000/tasks').then(response => {
-      console.log(response);
+      console.log('componentDidMount response: ' , response);
       this.setState({ todos: response.data });
     });
   }
 
   render () {
-    const todos = this.state.todos.map(todo => <TodoItem item={todo} />);
-    console.log(todos);
+    const todos = this.state.todos.map(todo => <TodoItem key={todo.id} item={todo} />);
+    console.log('TodoList render todos: ', todos);
     return (
       <div>
+      <h3>Todos</h3>
         {todos}
       </div>
     );
